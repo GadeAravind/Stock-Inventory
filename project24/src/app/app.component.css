@@ -1,0 +1,33 @@
+.navbar-nav .nav-item .nav-link {
+    cursor: pointer; 
+  }
+  
+.navbar {
+    width:100%;
+    background-color: #343a40; 
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #ffc107; 
+    font-size: 20px;
+  }
+  
+  .container {
+    margin-top: 3px; 
+    padding: 0; 
+    box-sizing: border-box;
+  }
+
+  .router-outlet {
+    padding: 20px;
+    background-color: #f8f9fa; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+ 

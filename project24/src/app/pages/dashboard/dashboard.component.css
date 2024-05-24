@@ -1,0 +1,42 @@
+.dashboard-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  filter: brightness(1.3) contrast(1.4);
+  background-image: url("https://img.freepik.com/premium-photo/modern-warehouse-with-racks-boxes-containers-ai-generated_266247-5213.jpg?size=626&ext=jpg&ga=GA1.1.2132674491.1714108933&semt=ais");
+  background-size: cover;
+  background-position: center; 
+  width: 100%;
+  height: 100vh;
+  margin-top: 0px;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  color: rgb(61, 134, 174);
+  padding-top: 0px;
+}
+
+.scrolling-text-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.scrolling-text-wrapper h1 {
+  font-size: 3em;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); } 
+  100% { transform: translateX(-100%); } 
+}

@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header bg-primary">
+        New Product
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-3">
+                <label for="">Product Name</label>
+                <input type="text" class="form-control" [(ngModel)]="productObj.productName" >
+            </div>
+            <div class="col-3">
+                <label for="">Category Name</label>
+                <input type="text" class="form-control" [(ngModel)]="productObj.categoryName"  >
+            </div>
+            <div class="col-3">
+                <label for="">Created Date</label>
+                <input type="date" class="form-control" [(ngModel)]="productObj.createdDate"  >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <!-- <div class="col-3"> -->
+                    <label for="">Price</label>
+                    <input type="number" class="form-control" [(ngModel)]="productObj.price"  >
+                <!-- </div> -->
+            </div>
+            <div class="col-3">
+                <label for="">productDetails</label>
+                <input type="text" class="form-control" [(ngModel)]="productObj.productDetails">
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-3 text-end">
+                <button class="btn btn-sm btn-secondary" routerLink="/product-list">Go To List</button>
+            </div>
+            <div class="col-3 text-center">
+                <button class="btn btn-sm btn-success" (click)="onSave()" >Save Product</button>
+            </div> 
+        </div>
+    </div>
+</div>

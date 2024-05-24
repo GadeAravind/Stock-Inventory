@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Register
+        </div>
+        <div class="card-body">
+          <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <div class="form-group">
+              <label for="fullName">FullName</label>
+              <input type="text" class="form-control" id="fullName" formControlName="fullName" placeholder="Enter Full Name">
+              <div *ngIf="registerForm.get('fullName')?.invalid && (registerForm.get('fullName')?.dirty || registerForm.get('fullName')?.touched)" class="text-danger">
+                <div *ngIf="registerForm.get('fullName')?.errors?.['required']">Full Name is required.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Email">
+              <div *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched)" class="text-danger">
+                <div *ngIf="registerForm.get('email')?.errors?.['required']">Email is required.</div>
+                <div *ngIf="registerForm.get('email')?.errors?.['email']">Email is not valid.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter Password">
+              <div *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)" class="text-danger">
+                <div *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</div>
+                <div *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must contain at least 6 characters.</div>
+            </div>
+          </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm Password">
+              <div *ngIf="registerForm.get('confirmPassword')?.invalid && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched)" class="text-danger">
+                <div *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">Confirm Password is required.</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+            <p>Already have an account? <a routerLink="/login">Login</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
